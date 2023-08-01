@@ -1,0 +1,32 @@
+{
+    "$schema": "https://purl.org/csv-cubed/qube-config/v1",
+    "title": "Estimated number of reported drink drive collisions in Great Britain by country and English region",
+    "description": "Estimated number of reported drink drive collisions in Great Britain by country and English region",
+    "creator": "https://www.gov.uk/government/organisations/department-for-transport",
+    "publisher": "https://www.gov.uk/government/organisations/office-for-national-statistics",
+    "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "keywords": [
+        "fatalities",
+        "injuries",
+        "collisions"
+    ],
+    "columns": {
+        "ONS Code": {
+            "from_template": "statistical-geography"
+        },
+        "Local authority": false,
+        "Occurrence": false,
+        "Observation": {
+            "type": "observations",
+            "measure": {
+                "label": "Monetary Count",
+                "from_existing": "https://purl.org/csv-cubed/resources/measures#count"
+            },
+            "data_type": "integer",
+            "unit": {
+                "label": "A monetary count",
+                "from_existing": "http://qudt.org/vocab/unit/NUM"
+            }
+        }
+    }
+}

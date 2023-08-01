@@ -1,0 +1,438 @@
+{
+    "@context": "http://www.w3.org/ns/csvw",
+    "@id": "estimated-number-of-reported-drink-drive-collisions-in-great-britain-by-country-and-english-region.csv#dataset",
+    "tables": [
+        {
+            "url": "estimated-number-of-reported-drink-drive-collisions-in-great-britain-by-country-and-english-region.csv",
+            "tableSchema": {
+                "columns": [
+                    {
+                        "titles": "ONS Code",
+                        "name": "ons_code",
+                        "propertyUrl": "estimated-number-of-reported-drink-drive-collisions-in-great-britain-by-country-and-english-region.csv#dimension/statistical-geography",
+                        "valueUrl": "http://statistics.data.gov.uk/id/statistical-geography/{+ons_code}",
+                        "required": true
+                    },
+                    {
+                        "titles": "Local authority",
+                        "name": "local_authority",
+                        "suppressOutput": true
+                    },
+                    {
+                        "titles": "Occurrence",
+                        "name": "occurrence",
+                        "suppressOutput": true
+                    },
+                    {
+                        "titles": "Observation",
+                        "name": "observation",
+                        "aboutUrl": "estimated-number-of-reported-drink-drive-collisions-in-great-britain-by-country-and-english-region.csv#obs/{ons_code}@monetary-count",
+                        "propertyUrl": "estimated-number-of-reported-drink-drive-collisions-in-great-britain-by-country-and-english-region.csv#measure/monetary-count",
+                        "datatype": "integer",
+                        "required": true
+                    },
+                    {
+                        "name": "virt_slice",
+                        "virtual": true,
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "qb:Slice"
+                    },
+                    {
+                        "name": "virt_slice_structure",
+                        "virtual": true,
+                        "propertyUrl": "qb:sliceStructure",
+                        "valueUrl": "estimated-number-of-reported-drink-drive-collisions-in-great-britain-by-country-and-english-region.csv#slice/cross-measures"
+                    },
+                    {
+                        "name": "virt_obs_observation",
+                        "virtual": true,
+                        "propertyUrl": "qb:observation",
+                        "valueUrl": "estimated-number-of-reported-drink-drive-collisions-in-great-britain-by-country-and-english-region.csv#obs/{ons_code}@monetary-count"
+                    },
+                    {
+                        "name": "virt_obs_observation_meas",
+                        "virtual": true,
+                        "aboutUrl": "estimated-number-of-reported-drink-drive-collisions-in-great-britain-by-country-and-english-region.csv#obs/{ons_code}@monetary-count",
+                        "propertyUrl": "qb:measureType",
+                        "valueUrl": "estimated-number-of-reported-drink-drive-collisions-in-great-britain-by-country-and-english-region.csv#measure/monetary-count"
+                    },
+                    {
+                        "name": "virt_obs_observation_unit",
+                        "virtual": true,
+                        "aboutUrl": "estimated-number-of-reported-drink-drive-collisions-in-great-britain-by-country-and-english-region.csv#obs/{ons_code}@monetary-count",
+                        "propertyUrl": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure",
+                        "valueUrl": "estimated-number-of-reported-drink-drive-collisions-in-great-britain-by-country-and-english-region.csv#unit/a-monetary-count"
+                    },
+                    {
+                        "name": "virt_dim_observation_ons_code",
+                        "virtual": true,
+                        "aboutUrl": "estimated-number-of-reported-drink-drive-collisions-in-great-britain-by-country-and-english-region.csv#obs/{ons_code}@monetary-count",
+                        "propertyUrl": "estimated-number-of-reported-drink-drive-collisions-in-great-britain-by-country-and-english-region.csv#dimension/statistical-geography",
+                        "valueUrl": "http://statistics.data.gov.uk/id/statistical-geography/{+ons_code}"
+                    },
+                    {
+                        "name": "virt_obs_observation_type",
+                        "virtual": true,
+                        "aboutUrl": "estimated-number-of-reported-drink-drive-collisions-in-great-britain-by-country-and-english-region.csv#obs/{ons_code}@monetary-count",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "qb:Observation"
+                    },
+                    {
+                        "name": "virt_dataSet_observation",
+                        "virtual": true,
+                        "aboutUrl": "estimated-number-of-reported-drink-drive-collisions-in-great-britain-by-country-and-english-region.csv#obs/{ons_code}@monetary-count",
+                        "propertyUrl": "qb:dataSet",
+                        "valueUrl": "estimated-number-of-reported-drink-drive-collisions-in-great-britain-by-country-and-english-region.csv#dataset"
+                    }
+                ],
+                "foreignKeys": [],
+                "primaryKey": [
+                    "ons_code"
+                ],
+                "aboutUrl": "estimated-number-of-reported-drink-drive-collisions-in-great-britain-by-country-and-english-region.csv#slice/{ons_code}"
+            }
+        }
+    ],
+    "rdfs:seeAlso": [
+        {
+            "@id": "estimated-number-of-reported-drink-drive-collisions-in-great-britain-by-country-and-english-region.csv#slice/cross-measures",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#SliceKey"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "estimated-number-of-reported-drink-drive-collisions-in-great-britain-by-country-and-english-region.csv#dimension/statistical-geography"
+                }
+            ]
+        },
+        {
+            "@id": "estimated-number-of-reported-drink-drive-collisions-in-great-britain-by-country-and-english-region.csv#csvcubed-build-activity",
+            "@type": [
+                "http://www.w3.org/ns/prov#Activity",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/ns/prov#used": [
+                {
+                    "@id": "https://github.com/GSS-Cogs/csvcubed/releases/tag/v0.4.4"
+                }
+            ]
+        },
+        {
+            "@id": "estimated-number-of-reported-drink-drive-collisions-in-great-britain-by-country-and-english-region.csv#dimension/statistical-geography",
+            "@type": [
+                "http://purl.org/linked-data/cube#DimensionProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://purl.org/linked-data/cube#CodedProperty"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Statistical Geography"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "estimated-number-of-reported-drink-drive-collisions-in-great-britain-by-country-and-english-region.csv#class/statistical-geography"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/dimension#refArea"
+                }
+            ]
+        },
+        {
+            "@id": "estimated-number-of-reported-drink-drive-collisions-in-great-britain-by-country-and-english-region.csv#measure/monetary-count",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://purl.org/linked-data/cube#MeasureProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Monetary Count"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "https://purl.org/csv-cubed/resources/measures#count"
+                }
+            ]
+        },
+        {
+            "@id": "estimated-number-of-reported-drink-drive-collisions-in-great-britain-by-country-and-english-region.csv#component/unit",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#attribute": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentRequired": [
+                {
+                    "@value": true
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 3
+                }
+            ]
+        },
+        {
+            "@id": "estimated-number-of-reported-drink-drive-collisions-in-great-britain-by-country-and-english-region.csv#class/statistical-geography",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Class",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ]
+        },
+        {
+            "@id": "estimated-number-of-reported-drink-drive-collisions-in-great-britain-by-country-and-english-region.csv#structure",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#DataStructureDefinition",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#component": [
+                {
+                    "@id": "estimated-number-of-reported-drink-drive-collisions-in-great-britain-by-country-and-english-region.csv#component/statistical-geography"
+                },
+                {
+                    "@id": "estimated-number-of-reported-drink-drive-collisions-in-great-britain-by-country-and-english-region.csv#component/measure-type"
+                },
+                {
+                    "@id": "estimated-number-of-reported-drink-drive-collisions-in-great-britain-by-country-and-english-region.csv#component/unit"
+                },
+                {
+                    "@id": "estimated-number-of-reported-drink-drive-collisions-in-great-britain-by-country-and-english-region.csv#component/monetary-count"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "http://purl.org/linked-data/cube#measureType"
+                },
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                },
+                {
+                    "@id": "estimated-number-of-reported-drink-drive-collisions-in-great-britain-by-country-and-english-region.csv#dimension/statistical-geography"
+                },
+                {
+                    "@id": "estimated-number-of-reported-drink-drive-collisions-in-great-britain-by-country-and-english-region.csv#measure/monetary-count"
+                }
+            ],
+            "http://purl.org/linked-data/cube#sliceKey": [
+                {
+                    "@id": "estimated-number-of-reported-drink-drive-collisions-in-great-britain-by-country-and-english-region.csv#slice/cross-measures"
+                }
+            ]
+        },
+        {
+            "@id": "estimated-number-of-reported-drink-drive-collisions-in-great-britain-by-country-and-english-region.csv#component/monetary-count",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "estimated-number-of-reported-drink-drive-collisions-in-great-britain-by-country-and-english-region.csv#measure/monetary-count"
+                }
+            ],
+            "http://purl.org/linked-data/cube#measure": [
+                {
+                    "@id": "estimated-number-of-reported-drink-drive-collisions-in-great-britain-by-country-and-english-region.csv#measure/monetary-count"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 4
+                }
+            ]
+        },
+        {
+            "@id": "estimated-number-of-reported-drink-drive-collisions-in-great-britain-by-country-and-english-region.csv#dataset",
+            "@type": [
+                "http://purl.org/linked-data/cube#DataSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/ns/dcat#Resource",
+                "http://www.w3.org/ns/dcat#Dataset",
+                "http://purl.org/linked-data/cube#Attachable"
+            ],
+            "http://purl.org/dc/terms/creator": [
+                {
+                    "@id": "https://www.gov.uk/government/organisations/department-for-transport"
+                }
+            ],
+            "http://purl.org/dc/terms/description": [
+                {
+                    "@type": "https://www.w3.org/ns/iana/media-types/text/markdown#Resource",
+                    "@value": "Estimated number of reported drink drive collisions in Great Britain by country and English region"
+                }
+            ],
+            "http://purl.org/dc/terms/identifier": [
+                {
+                    "@value": "Estimated number of reported drink drive collisions in Great Britain by country and English region"
+                }
+            ],
+            "http://purl.org/dc/terms/issued": [
+                {
+                    "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+                    "@value": "2023-08-01T20:45:57.588431"
+                }
+            ],
+            "http://purl.org/dc/terms/license": [
+                {
+                    "@id": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                }
+            ],
+            "http://purl.org/dc/terms/modified": [
+                {
+                    "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+                    "@value": "2023-08-01T20:45:57.588431"
+                }
+            ],
+            "http://purl.org/dc/terms/publisher": [
+                {
+                    "@id": "https://www.gov.uk/government/organisations/office-for-national-statistics"
+                }
+            ],
+            "http://purl.org/dc/terms/title": [
+                {
+                    "@language": "en",
+                    "@value": "Estimated number of reported drink drive collisions in Great Britain by country and English region"
+                }
+            ],
+            "http://purl.org/linked-data/cube#structure": [
+                {
+                    "@id": "estimated-number-of-reported-drink-drive-collisions-in-great-britain-by-country-and-english-region.csv#structure"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Estimated number of reported drink drive collisions in Great Britain by country and English region"
+                }
+            ],
+            "http://www.w3.org/ns/dcat#keyword": [
+                {
+                    "@language": "en",
+                    "@value": "collisions"
+                },
+                {
+                    "@language": "en",
+                    "@value": "fatalities"
+                },
+                {
+                    "@language": "en",
+                    "@value": "injuries"
+                }
+            ],
+            "http://www.w3.org/ns/prov#wasGeneratedBy": [
+                {
+                    "@id": "estimated-number-of-reported-drink-drive-collisions-in-great-britain-by-country-and-english-region.csv#csvcubed-build-activity"
+                }
+            ]
+        },
+        {
+            "@id": "estimated-number-of-reported-drink-drive-collisions-in-great-britain-by-country-and-english-region.csv#component/statistical-geography",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "estimated-number-of-reported-drink-drive-collisions-in-great-britain-by-country-and-english-region.csv#dimension/statistical-geography"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "estimated-number-of-reported-drink-drive-collisions-in-great-britain-by-country-and-english-region.csv#dimension/statistical-geography"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 1
+                }
+            ]
+        },
+        {
+            "@id": "estimated-number-of-reported-drink-drive-collisions-in-great-britain-by-country-and-english-region.csv#component/measure-type",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "http://purl.org/linked-data/cube#measureType"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "http://purl.org/linked-data/cube#measureType"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 2
+                }
+            ]
+        },
+        {
+            "@id": "estimated-number-of-reported-drink-drive-collisions-in-great-britain-by-country-and-english-region.csv#unit/a-monetary-count",
+            "@type": [
+                "http://qudt.org/schema/qudt/Unit",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"
+            ],
+            "http://qudt.org/schema/qudt/isScalingOf": [
+                {
+                    "@id": "http://qudt.org/vocab/unit/NUM"
+                }
+            ],
+            "http://www.ontology-of-units-of-measure.org/resource/om-2/hasFactor": [
+                {
+                    "@type": "http://www.w3.org/2001/XMLSchema#float",
+                    "@value": "1.0"
+                }
+            ],
+            "http://www.ontology-of-units-of-measure.org/resource/om-2/hasUnit": [
+                {
+                    "@id": "http://qudt.org/vocab/unit/NUM"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+                {
+                    "@id": "http://qudt.org/vocab/unit/NUM"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "A monetary count"
+                }
+            ]
+        }
+    ]
+}
