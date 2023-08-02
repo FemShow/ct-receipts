@@ -1,14 +1,16 @@
 {
     "$schema": "https://purl.org/csv-cubed/qube-config/v1",
-    "title": "Estimated number of reported drink drive collisions in Great Britain by country and English region",
-    "description": "Estimated number of reported drink drive collisions in Great Britain by country and English region",
-    "creator": "https://www.gov.uk/government/organisations/department-for-transport",
-    "publisher": "https://www.gov.uk/government/organisations/office-for-national-statistics",
+    "title": "Receipts of Council Taxes: England, April to June 2010 to January to March 2023",
+    "description": "Receipts of Council Taxes: England, April to June 2010 to January to March 2023",
+    "creator": "https://www.gov.uk/government/organisations/department_for_levelling_up_housing_and_communities",
+    "publisher": "https://www.gov.uk/government/organisations/department_for_levelling_up_housing_and_communities",
     "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
     "keywords": [
-        "fatalities",
-        "injuries",
-        "collisions"
+        "taxes",
+        "local",
+        "boroughs",
+        "councils",
+        "authorities"
     ],
     "columns": {
         "ONS Code": {
