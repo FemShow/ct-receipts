@@ -1,0 +1,35 @@
+{
+  "version": "1.0",
+  "codelists": {
+    "Notes": {
+      "[note 1]": "These figures have been revised following receipt of Gosport's Q4 2021 to 2022 data.",
+      "[r1]": "This indicates that an authority has revised a previous submission which has resulted in amended figures to the April to June 2022 figures in comparison to the previous publication.",
+      "[r2]": "This indicates that an authority has revised a previous submission which has resulted in amended figures to the July to September 2022 figures in comparison to the previous publication.",
+      "[r3]": "This indicates that an authority has revised a previous submission which has resulted in amended figures to the October to December 2022 figures in comparison to the previous publication.",
+      "[r]": "This indicates that data has been revised.",
+      "[x]": "This indicates that data is not available or has been suppressed. Refer to the notes column in each worksheet for further information. ",
+      "[z]": "This indicates that an authority did not exist in the period. Local authority reorganisation is usually as a result of structural changes to local government, for example where local districts merge to become a unitary authority."
+    }
+  },
+  "model": {
+    "dimensions": {
+      "Engine": {
+        "type": "string"
+      },
+      "Fault": {
+        "type": "dimension",
+        "attributes": [
+          {
+            "name": "FaultCode",
+            "codelist": "FaultCode"
+          }
+        ]
+      }
+    },
+    "measures": {
+      "Occurrences": {
+        "type": "integer"
+      }
+    }
+  }
+}

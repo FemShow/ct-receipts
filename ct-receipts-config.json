@@ -2,8 +2,8 @@
     "$schema": "https://purl.org/csv-cubed/qube-config/v1",
     "title": "Receipts of Council Taxes: England, April to June 2010 to January to March 2023",
     "description": "Receipts of Council Taxes: England, April to June 2010 to January to March 2023",
-    "creator": "https://www.gov.uk/government/organisations/department_for_levelling_up_housing_and_communities",
-    "publisher": "https://www.gov.uk/government/organisations/department_for_levelling_up_housing_and_communities",
+    "creator": "https://www.gov.uk/government/organisations/department-for-levelling-up-housing-and-communities",
+    "publisher": "https://www.gov.uk/government/organisations/department-for-levelling-up-housing-and-communities",
     "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
     "keywords": [
         "taxes",
