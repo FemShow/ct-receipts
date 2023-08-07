@@ -58,6 +58,13 @@ df_melted = df.melt(
 # Insert '[z]' in the 'Notes' column for rows with null values in 'Percentage Change (%) from Q4 2021'
 df_melted['Notes'] = df_melted.apply(lambda row: '[z]' if pd.isna(row["Percentage Change (%) from Q4 2021"]) else row['Notes'], axis=1)
 
+# Insert new columns based on specific conditions in 'Notes' column
+notes_to_insert = ['[note 1]', '[r1]', '[r2]', '[r3]', '[z]']
+for i, note in enumerate(notes_to_insert, start=1):
+    col_name = f'Note{i}'
+    df_melted[col_name] = df_melted.apply(lambda row: note if note in row['Notes'] else '', axis=1)
+
+
 # Save the melted DataFrame as a CSV file
 df_melted.to_csv(output_file, index=False)
 

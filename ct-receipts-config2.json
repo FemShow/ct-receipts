@@ -1,92 +1,110 @@
 {
-    "$schema": "https://purl.org/csv-cubed/qube-config/v1",
-    "title": "Receipts of Council Taxes: England, April to June 2010 to January to March 2023",
-    "description": "Receipts of Council Taxes: England, April to June 2010 to January to March 2023",
-    "creator": "https://www.gov.uk/government/organisations/department-for-levelling-up-housing-and-communities",
-    "publisher": "https://www.gov.uk/government/organisations/department-for-levelling-up-housing-and-communities",
-    "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
-    "keywords": [
-        "taxes",
-        "local",
-        "boroughs",
-        "councils",
-        "authorities"
-    ],
-    "columns": {
-        "ONS Code": {
-            "from_template": "statistical-geography"
-        },
-        "Local authority": false,
-        "Local authority,Percentage Change (%) from Q4 2021": {
-            "type": "observations",
-            "measure": {
-                "label": "Local authority,Percentage Change (%) from Q4 2021",
-                "from_existing": "https://purl.org/csv-cubed/resources/measures#portion"
-            },
-            "data_type": "float",
-            "unit": {
-                "label": "Percentage",
-                "from_existing": "http://qudt.org/vocab/unit/PERCENT"
-            }
-        },
-        "Notes": {
-            "sort": {
-              "by": "label",
-              "method": "label"
-            },
-            "type": "dimension",
-            "concept": [
-                {
-                  "label": "These figures have been revised following receipt of Gosport's Q4 2021 to 2022 data.",
-                  "description": "These figures have been revised following receipt of Gosport's Q4 2021 to 2022 data.",
-                  "notation": "[note 1]"
-                },
-                {
-                  "label": "This indicates that an authority has revised a previous submission which has resulted in amended figures to the April to June 2022 figures in comparison to the previous publication.",
-                  "description": "This indicates that an authority has revised a previous submission which has resulted in amended figures to the April to June 2022 figures in comparison to the previous publication.",
-                  "notation": "[r1]"
-                },
-                {
-                  "label": "This indicates that an authority has revised a previous submission which has resulted in amended figures to the July to September 2022 figures in comparison to the previous publication.",
-                  "description": "This indicates that an authority has revised a previous submission which has resulted in amended figures to the July to September 2022 figures in comparison to the previous publication.",
-                  "notation": "[r2]"
-                },
-                {
-                  "label": "This indicates that an authority has revised a previous submission which has resulted in amended figures to the October to December 2022 figures in comparison to the previous publication.",
-                  "description": "This indicates that an authority has revised a previous submission which has resulted in amended figures to the October to December 2022 figures in comparison to the previous publication.",
-                  "notation": "[r3]"
-                },
-                {
-                  "label": "This indicates that data has been revised.",
-                  "description": "This indicates that data has been revised.",
-                  "notation": "[r]"
-                },
-                {
-                  "label": "This indicates that data is not available or has been suppressed. Refer to the notes column in each worksheet for further information.",
-                  "description": "This indicates that data is not available or has been suppressed. Refer to the notes column in each worksheet for further information.",
-                  "notation": "[x]"
-                },
-                {
-                  "label": "This indicates that an authority did not exist in the period. Local authority reorganisation is usually as a result of structural changes to local government, for example where local districts merge to become a unitary authority.",
-                  "description": "This indicates that an authority did not exist in the period. Local authority reorganisation is usually as a result of structural changes to local government, for example where local districts merge to become a unitary authority.",
-                  "notation": "[z]"
-                }
-            ]
-        },
-        "Occurrence": {
-            "type": "dimension"
-        },
-        "Observation": {
-            "type": "observations",
-            "measure": {
-                "label": "Amount of money",
-                "from_existing": "https://purl.org/csv-cubed/resources/measures#amount"
-            },
-            "data_type": "float",
-            "unit": {
-                "label": "A monetary count",
-                "from_existing": "http://qudt.org/vocab/unit/PoundSterling"
-            }
+  "$schema": "https://purl.org/csv-cubed/qube-config/v1",
+  "title": "Receipts of Council Taxes: England, April to June 2010 to January to March 2023",
+  "description": "Receipts of Council Taxes: England, April to June 2010 to January to March 2023",
+  "creator": "https://www.gov.uk/government/organisations/department-for-levelling-up-housing-and-communities",
+  "publisher": "https://www.gov.uk/government/organisations/department-for-levelling-up-housing-and-communities",
+  "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+  "keywords": [
+    "taxes",
+    "local",
+    "boroughs",
+    "councils",
+    "authorities"
+  ],
+  "columns": {
+    "ONS Code": {
+      "from_template": "statistical-geography"
+    },
+    "Local authority": {
+      "type": "dimension",
+      "label": "Local authority"
+    },
+    "Local authority,Percentage Change (%) from Q4 2021": {
+      "type": "observations",
+      "measure": {
+        "label": "Local authority,Percentage Change (%) from Q4 2021",
+        "from_existing": "https://purl.org/csv-cubed/resources/measures#portion"
+      },
+      "data_type": "float",
+      "unit": {
+        "label": "Percentage",
+        "from_existing": "http://qudt.org/vocab/unit/PERCENT"
+      }
+    },"Notes": {
+      "type": "attribute",
+      "label": "Notes"
+    }    
+    },
+    "Note1": {
+      "type": "marker",
+      "label": "Note1",
+      "concepts": [
+        {
+          "label": "Note1",
+          "description": "These figures have been revised following receipt of Gosport's Q4 2021 to 2022 data.",
+          "notation": "[note 1]"
         }
+      ]
+    },
+    "Note2": {
+      "type": "marker",
+      "label": "Note2",
+      "concepts": [
+        {
+          "label": "Note2",
+          "description": "This indicates that an authority has revised a previous submission which has resulted in amended figures to the April to June 2022 figures in comparison to the previous publication.",
+          "notation": "[r1]"
+        }
+      ]
+    },
+    "Note3": {
+      "type": "marker",
+      "label": "Note3",
+      "concepts": [
+        {
+          "label": "Note3",
+          "description": "This indicates that an authority has revised a previous submission which has resulted in amended figures to the July to September 2022 figures in comparison to the previous publication.",
+          "notation": "[r2]"
+        }
+      ]
+    },
+    "Note4": {
+      "type": "marker",
+      "label": "Note4",
+      "concepts": [
+        {
+          "label": "Note4",
+          "description": "This indicates that an authority has revised a previous submission which has resulted in amended figures to the October to December 2022 figures in comparison to the previous publication.",
+          "notation": "[r3]"
+        }
+      ]
+    },
+    "Note5": {
+      "type": "marker",
+      "label": "Note5",
+      "concepts": [
+        {
+          "label": "Note5",
+          "description": "This indicates that data has been revised.",
+          "notation": "[Z]"
+        }
+      ]
+    },
+    "Occurrence": {
+      "type": "dimension",
+      "label": "Occurrence"
+    },
+    "Observation": {
+      "type": "measure",
+      "label": "Amount of money",
+      "measure": {
+        "from_existing": "https://purl.org/csv-cubed/resources/measures#amount"
+      },
+      "data_type": "float",
+      "unit": {
+        "label": "A monetary count",
+        "from_existing": "http://qudt.org/vocab/unit/PoundSterling"
+      }
     }
-}
+  }
